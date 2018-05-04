@@ -1,13 +1,33 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Home } from "./pages/home/home";
+import { Header } from "./components/Header";
+import { languages } from "./db/languages/index";
 
-class App extends Component {
+export default class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      language: 0
+    }
+  }
+  languageToRender() {
+    switch (this.state.language) {
+      case 0:
+        return <Header language={languages.romanianLanguage} />;
+      case 1:
+        return <Header language={languages.englishLanguage} />;
+      default:
+        break;
+    }
+  }
   render() {
     return (
-      <Home />
+      <div>
+        {this.languageToRender()}
+        <Home />
+      </div>
     );
   }
 }
 
-export default App;
