@@ -10,7 +10,7 @@ export class Header extends React.Component {
                 {
                     this.props.language.menuButtons.map((data, index) => <Button key={index}>{data}</Button>)
                 }
-                <LanguageDropDown />
+                <LanguageDropDown languageSet={this.props.languageSet}/>
             </div>
         )
     }
