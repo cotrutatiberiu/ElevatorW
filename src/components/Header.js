@@ -11,8 +11,10 @@ export class Header extends React.Component {
 
         return (
             <div>
-                <Logo/>
-                <Banner/>
+                <div className="header">
+                <Logo className="logo"/>
+                <Banner className="banner"/>
+                </div>
                 {
                     language.menuButtons.map((data, index) => {
                         if (index !== language.menuButtons.length - 1) {

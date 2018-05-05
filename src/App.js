@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Home } from "./pages/home/home";
-import { Header } from "./components/Header";
-import { languages } from "./db/languages/index";
+import { Home } from "pages/home/home";
+import { Header } from "components/Header";
+import { languages } from "db/languages/index";
 
 export default class App extends Component {
   constructor() {
