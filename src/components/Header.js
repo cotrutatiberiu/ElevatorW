@@ -1,6 +1,8 @@
 import React from "react";
 import { LanguageDropDown } from "./LanguageDropDown";
 import { Button } from "react-bootstrap";
+import {Logo} from "./Logo";
+import {Banner } from "./Banner";
 
 export class Header extends React.Component {
     render() {
@@ -9,6 +11,8 @@ export class Header extends React.Component {
 
         return (
             <div>
+                <Logo/>
+                <Banner/>
                 {
                     language.menuButtons.map((data, index) => {
                         if (index !== language.menuButtons.length - 1) {
