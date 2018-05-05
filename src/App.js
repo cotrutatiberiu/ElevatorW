@@ -14,19 +14,19 @@ export default class App extends Component {
     }
   }
 
-  languageSet=(dropdownItem)=> {
-    console.log(dropdownItem);
-    this.setState({ language: dropdownItem })
+  languageSet = (dropdownItem) => {
+    this.setState({ language: Number(dropdownItem) })
   }
 
-  languageToRender=()=> {
-    switch (this.state.language) {
+  languageToRender = () => {
+    const { language } = this.state;
+    switch (language) {
       case 0:
         return <Header language={languages.romanianLanguage} languageSet={this.languageSet} />;
       case 1:
         return <Header language={languages.englishLanguage} languageSet={this.languageSet} />;
       default:
-        break;
+        return <p>Language error</p>
     }
   }
 

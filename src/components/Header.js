@@ -4,13 +4,21 @@ import { Button } from "react-bootstrap";
 
 export class Header extends React.Component {
     render() {
-        console.log(this.props.language);
+        const { language, languageSet } = this.props;
+        let dropDownTitle = language.menuButtons[language.menuButtons.length - 1];
+
         return (
             <div>
                 {
-                    this.props.language.menuButtons.map((data, index) => <Button key={index}>{data}</Button>)
+                    language.menuButtons.map((data, index) => {
+                        if (index !== language.menuButtons.length - 1) {
+                            return <Button key={index}>{data}</Button>
+                        } else {
+                            return <LanguageDropDown key="lang" title={dropDownTitle} languageSet={languageSet} />
+                        }
+                    })
                 }
-                <LanguageDropDown languageSet={this.props.languageSet}/>
+
             </div>
         )
     }
