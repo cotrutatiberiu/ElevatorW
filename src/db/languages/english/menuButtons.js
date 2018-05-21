@@ -1,1 +1,1 @@
-export let menuButtons = ["Home", "Maintenance", "Modernization", "Advice", "Contact", "Language"];
+export let menuButtons = ["Home", "Maintenance", "Modernization", "Advice", "Company", "Elevators", "Contact", "Language"];
