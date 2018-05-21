@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Header } from "components/Header";
 import { languages } from "db/languages/index";
-import { ContactRoute, HomeRoute } from "routes/index";
+
 
 export default class App extends Component {
   constructor() {
@@ -34,9 +34,6 @@ export default class App extends Component {
     return (
       <div>
         {this.languageToRender()}
-        
-        <ContactRoute />
-        <HomeRoute />
       </div>
     );
   }
