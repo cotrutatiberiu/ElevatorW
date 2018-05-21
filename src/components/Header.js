@@ -23,12 +23,10 @@ export class Header extends React.Component {
                     <div id="text-side"><h1>something something here </h1></div>
                 </div>
                 <hr />
-
                 <div id="top-navbar">
-                    <Routes menuButtons={language.menuButtons} />
+                    <Routes menuButtons={language.menuButtons} language={language} />
                     <LanguageDropDown key="lang" title={dropDownTitle} languageSet={languageSet} />
                 </div>
-
             </div>
         )
     }
