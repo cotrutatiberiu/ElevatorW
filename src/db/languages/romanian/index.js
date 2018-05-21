@@ -1,5 +1,7 @@
-import { menuButtons } from "./menuButtons"
+import { menuButtons } from "./menuButtons";
+import {contactInformations} from "./contactInformations";
 export let romanianLanguage =
     {
-        menuButtons
+        menuButtons,
+        contactInformations
     }

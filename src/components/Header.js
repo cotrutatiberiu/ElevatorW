@@ -4,9 +4,7 @@ import { Button } from "react-bootstrap";
 import { Logo } from "./Logo";
 import { Banner } from "./Banner";
 import "styles/Header.css";
-
-
-import { Home } from "pages/home/home";
+import { menuButtons as englishMenuButtons } from "db/languages/english/menuButtons";
 
 export class Header extends React.Component {
     render() {
@@ -27,12 +25,14 @@ export class Header extends React.Component {
                     <div id="text-side"><h1>something something here </h1></div>
                 </div>
                 <hr />
-                
+
                 <div id="top-navbar">
                     {
                         language.menuButtons.map((data, index) => {
-                            if (index !== language.menuButtons.length - 1) {
-                                return <Button key={index}>{data}</Button>
+                            if (index === 0) {
+                                return <Button key={index} href="/">{data}</Button>
+                            } else if (index > 0 && index !== language.menuButtons.length - 1) {
+                                return <Button key={index} href={`/${englishMenuButtons[index].toLowerCase()}`}>{data}</Button>
                             } else {
                                 return <LanguageDropDown key="lang" title={dropDownTitle} languageSet={languageSet} />
                             }
